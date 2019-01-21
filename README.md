@@ -2,7 +2,7 @@
 
 MatlabR is to use R in Matlab, which builds the bridge between Matlab and R. The original git of [brian-lau's MatlabR] (https://github.com/brian-lau/MatlabR) code has too many issues and can not work well and its introduction is too simple. I modified the MatR.m file and wrote a new introduction and demo. 
 
-MatlabR is based on [Java Rengine](https://github.com/s-u/REngine). As its name shown, MatlabR.m code works in Matlab to use R functions. In R console, you need to install “Rserve” library package. Because “MatlabR” and “Rserve” work in Client-Server mode. MatlabR and Rserve can work in either one single computer or two separate ones. Thus you can have multiple Matlabs in one or more computers remotely running parallel at the same time to communicate with a single R host. 
+MatlabR is based on [s-u's Java Rengine](https://github.com/s-u/REngine). As its name shown, MatlabR.m code works in Matlab to use R functions. In R console, you need to install “Rserve” library package. Because “MatlabR” and “Rserve” work in Client-Server mode. MatlabR and Rserve can work in either one single computer or two separate ones. Thus you can have multiple Matlabs in one or more computers remotely running parallel at the same time to communicate with a single R host. 
 
 It is important to no more than one MatR connection with R console is allowed for a port number in one Matlab terminal, otherwise your Matlab windows will hang on busy. 
 
@@ -32,7 +32,7 @@ Don’t forget to add your MatlabR folder path before using MatlabR by Matlab Co
 `addpath ‘D:\MatlabR’` 
 
 ## 4. R host IP address and Rserve Port
-You should know where is your R console and record the host’s **IP address** and **Rserve port**.
+You should know where is your R console and record the host’s **IP address** and **Rserve port** in MatR.m.
 ```
  properties
       host = 'localhost'  % You should give your R console IP address here
