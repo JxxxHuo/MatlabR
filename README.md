@@ -1,8 +1,8 @@
-# MatlabR
+# New MatlabR
 
 The original git of [MatlabR] (https://github.com/brian-lau/MatlabR) code has too many issues and can not work well and its introduction is too simple. I (Jxxx Huo) modified the MatR.m file and wrote a new introduction and demo. 
 
-MatlabR is based on [Java Rengine](https://github.com/s-u/REngine). As its name shown, MatlabR.m code only works in Matlab. In R console, you need to install °∞Rserve°± library package. Because °∞MatlabR°± and °∞Rserve°± work in Client-Server mode. MatlabR and Rserve can work in either one single computer or two separate ones. Thus you can have multiple Matlabs in one or more computers remotely running parallel at the same time to communicate with a single R host. 
+MatlabR is based on [Java Rengine](https://github.com/s-u/REngine). As its name shown, MatlabR.m code only works in Matlab. In R console, you need to install ‚ÄúRserve‚Äù library package. Because ‚ÄúMatlabR‚Äù and ‚ÄúRserve‚Äù work in Client-Server mode. MatlabR and Rserve can work in either one single computer or two separate ones. Thus you can have multiple Matlabs in one or more computers remotely running parallel at the same time to communicate with a single R host. 
 
 It is important to no more than one MatR connection with R console is allowed for a port number in one Matlab terminal, otherwise your Matlab windows will hang on . 
 
@@ -12,10 +12,10 @@ To use MatlabR, you need to configure your computer environment correctly.
 
 1.	## Java version
 
-As the Java Rengine was updated, some MatlabR functions lost their fundation. Hereby, I compiled the new version of Java Rengine, you can find them in the °∞lib°± folder. The java version embeded in Matlab may not be consistent with the lib jar file, which requires Java version above 1.8.0 and may induce a java version error, so you need to use an external Java with version number higher than 1.8.0_111. The details of how to make Matlab use external Java can be seen in wiki [page]. Generally you can do it by adding a new computer environment varaince °ÆMATLAB_JAVA°Ø, which refers to the path of jre.
+As the Java Rengine was updated, some MatlabR functions lost their fundation. Hereby, I compiled the new version of Java Rengine, you can find them in the ‚Äúlib‚Äù folder. The java version embeded in Matlab may not be consistent with the lib jar file, which requires Java version above 1.8.0 and may induce a java version error, so you need to use an external Java with version number higher than 1.8.0_111. The details of how to make Matlab use external Java can be seen in wiki [page]. Generally you can do it by adding a new computer environment varaince ‚ÄòMATLAB_JAVA‚Äô, which refers to the path of jre.
 
 2.	## Javaclasspath
-To load the java class successfully into matlab, I suggest you to use the following static load method rather than a dynamic load method, otherwise you will get a °∞MatR/connect°± failure.
+To load the java class successfully into matlab, I suggest you to use the following static load method rather than a dynamic load method, otherwise you will get a ‚ÄúMatR/connect‚Äù failure.
 
 In matlab command window run 
 `cd(prefdir); `
@@ -26,11 +26,11 @@ Then add REngine.jar and Rserve.jar's fullptath to javaclasspath.txt like:
 `D:\MatlabR\lib\RserveEngine.jar`
 
 3.	## MatlabR path
-Don°Øt forget to add your MatlabR folder path before using MatlabR by Matlab Command:
-`addpath °ÆD:\MatlabR°Ø` 
+Don‚Äôt forget to add your MatlabR folder path before using MatlabR by Matlab Command:
+`addpath ‚ÄòD:\MatlabR‚Äô` 
 
 4.	## R host IP address and Rserve Port
-You should know where is your R console and record the host°Øs **IP address** and **Rserve port**.
+You should know where is your R console and record the host‚Äôs **IP address** and **Rserve port**.
 
 To start Rserve in R console, you can run the following commands in R console:
 
@@ -68,7 +68,7 @@ Possible Problem
 
 Java version problem:
 
-When you get error like °∞...Java components are not installed ...°±, this is probably due to java version deprecated. You need to change Matlab java version by installing an updated java jdk/jre outside of Matlab:
+When you get error like ‚Äú...Java components are not installed ...‚Äù, this is probably due to java version deprecated. You need to change Matlab java version by installing an updated java jdk/jre outside of Matlab:
 
 1. Download the JVM Version You Want to Use
 You can download the Java Virtual Machine from the Web site http://java.sun.com/j2se/downloads.html.
