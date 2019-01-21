@@ -33,13 +33,19 @@ Don’t forget to add your MatlabR folder path before using MatlabR by Matlab Co
 
 ## 4. R host IP address and Rserve Port
 You should know where is your R console and record the host’s **IP address** and **Rserve port**.
+```
+ properties
+      host = 'localhost'  % You should give your R console IP address here
+      port = 6311         % You should define your Rserve port here
+   end
+```
 
 To start Rserve in R console, you can run the following commands in R console:
 
 ```
 install.packages ('Rserve')
 Library(Rserve)
-Rserve()  or Rserve(port=6311)`
+Rserve()  or Rserve(port=6311)
 ```
 # How to avoid freezing/hang up
 
