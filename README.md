@@ -18,13 +18,15 @@ As the Java Rengine was updated, some MatlabR functions lost their fundation. He
 To load the java class successfully into matlab, I suggest you to use the following static load method rather than a dynamic load method, otherwise you will get a “MatR/connect” failure.
 
 In matlab command window run 
+```
 `cd(prefdir); `
-`edit javaclasspath.txt`     
+`edit javaclasspath.txt`
+```
 Then add REngine.jar and Rserve.jar's fullptath to javaclasspath.txt like:
-
+```
 `D:\MatlabR\lib\REngine.jar`
 `D:\MatlabR\lib\RserveEngine.jar`
-
+```
 ## 3. MatlabR path
 Don’t forget to add your MatlabR folder path before using MatlabR by Matlab Command:
 `addpath ‘D:\MatlabR’` 
