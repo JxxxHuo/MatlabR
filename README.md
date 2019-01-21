@@ -4,7 +4,7 @@ The original git of [brian-lau's MatlabR] (https://github.com/brian-lau/MatlabR)
 
 MatlabR is based on [Java Rengine](https://github.com/s-u/REngine). As its name shown, MatlabR.m code only works in Matlab. In R console, you need to install “Rserve” library package. Because “MatlabR” and “Rserve” work in Client-Server mode. MatlabR and Rserve can work in either one single computer or two separate ones. Thus you can have multiple Matlabs in one or more computers remotely running parallel at the same time to communicate with a single R host. 
 
-It is important to no more than one MatR connection with R console is allowed for a port number in one Matlab terminal, otherwise your Matlab windows will hang on . 
+It is important to no more than one MatR connection with R console is allowed for a port number in one Matlab terminal, otherwise your Matlab windows will hang on busy. 
 
 To use MatlabR, you need to configure your computer environment correctly. 
 
@@ -39,7 +39,7 @@ install.packages ('Rserve')
 Library(Rserve)
 Rserve()  or Rserve(port=6311)`
 ```
-# How to avoid hang on 
+# How to avoid freezing/hang up
 
 1. Begin and End
 
@@ -49,14 +49,14 @@ Begin: at the beginning of MatlabR, you can simply establish a connection by
 r=MatR()
 ```
 After it, check whether `r.isConnected` is 1, if not `r.connect`, usually, r.isConnected is 1 by default.
-Warning! If `r.isConnected` is already 1, you use r.connect, your Matlab will hang on! 
+Warning! If `r.isConnected` is already 1, you use r.connect, your Matlab will hang on busy! 
 
 Then you can run some routines like 
 ```
 r.eval('seq(1,10)');
 r.result.asDoubles()
    ```
-   End: you must be careful to release r connection when the r connection is over. I suggest you use **`r.kill`**, where I did some change to the original one. Warning! You should not start a new connection when the old one exists for the same , otherwise you will find your Matlab hang on there. 
+   End: you must be careful to release r connection when the r connection is over. I suggest you use **`r.kill`**, where I did some change to the original one. Warning! You should not start a new connection when the old one exists for the same , otherwise you will find your Matlab hang on busy there. 
    ```
    r.kill
    clear r
