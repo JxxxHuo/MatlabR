@@ -41,8 +41,6 @@ Rserve()  or Rserve(port=6311)`
 ```
 # How to avoid freezing/hang up
 
-1. Begin and End
-
 Begin: at the beginning of MatlabR, you can simply establish a connection by 
 
 ```
