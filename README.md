@@ -12,7 +12,7 @@ To use MatlabR, you need to configure your computer environment correctly.
 
 ## 1. Java version
 
-As the Java Rengine was updated, some MatlabR functions lost their fundation. Hereby, I compiled the new version of Java Rengine, you can find them in the “lib” folder. The java version embeded in Matlab may not be consistent with the lib jar file, which requires Java version above 1.8.0 and may induce a java version error, so you need to use an external Java with version number higher than 1.8.0_111. The details of how to make Matlab use external Java can be seen in wiki [page]. Generally you can do it by adding a new computer environment varaince ‘MATLAB_JAVA’, which refers to the path of jre.
+As the Java Rengine was updated, some MatlabR functions lost their fundation. Hereby, I compiled the new version of Java Rengine, you can find them in the “lib” folder. The java version embeded in Matlab may not be consistent with the lib jar file, which requires Java version above 1.8.0 and may induce a java version error, so you need to use an external Java with version number higher than 1.8.0_111. The details of how to make Matlab use external Java can be seen in my [wiki](https://github.com/JxxxHuo/MatlabR/wiki/How-to-change-Matlab-Java-version). Generally you can do it by adding a new computer environment varaince ‘MATLAB_JAVA’, which refers to the path of jre.
 
 ## 2. Javaclasspath
 To load the java class successfully into matlab, I suggest you to use the following static load method rather than a dynamic load method, otherwise you will get a “MatR/connect” failure.
