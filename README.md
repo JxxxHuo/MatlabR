@@ -1,6 +1,6 @@
 # New MatlabR 
 
-MatlabR is to use R in Matlab, which builds the bridge between Matlab and R. The original git of [brian-lau's MatlabR] (https://github.com/brian-lau/MatlabR) code has too many issues and can not work well and its introduction is too simple. I modified the MatR.m file and wrote a new introduction and demo. 
+MatlabR is to use R in Matlab, which builds the bridge between Matlab and R. The original git of [brian-lau's MatlabR] (https://github.com/brian-lau/MatlabR) code has too many issues and can not work well and its introduction is too simple. I modified the MatR.m file and wrote a new introduction and demo (at least guaranteed for Windows). 
 
 MatlabR is based on [s-u's Java Rengine](https://github.com/s-u/REngine). As its name shown, MatlabR.m code works in Matlab to use R functions. In R console, you need to install “Rserve” library package. Because “MatlabR” and “Rserve” work in Client-Server mode. MatlabR and Rserve can work in either one single computer or two separate ones. Thus you can have multiple Matlabs in one or more computers remotely running parallel at the same time to communicate with a single R host. 
 
@@ -27,6 +27,8 @@ Then add REngine.jar and Rserve.jar's fullptath to javaclasspath.txt like:
 D:\MatlabR\lib\REngine.jar
 D:\MatlabR\lib\RserveEngine.jar
 ```
+Restart your Matlab to initialize the new Javaclasspath. Thereafter, you won't be bothered by the Javaclasspath any more. 
+
 ## 3. MatlabR path
 Don’t forget to add your MatlabR folder path before using MatlabR by Matlab Command:
 `addpath ‘D:\MatlabR’` 
@@ -69,7 +71,7 @@ r.result.asDoubles()
    ```
 
 ---------------------------------------------------------------------------------------------------------------------------------
-
+If you have issues, please feel free to let me know. I am happy to fix them.  
 
 
 
