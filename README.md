@@ -27,7 +27,7 @@ Then add REngine.jar and Rserve.jar's fullptath to javaclasspath.txt like:
 D:\MatlabR\lib\REngine.jar
 D:\MatlabR\lib\RserveEngine.jar
 ```
-Restart your Matlab to initialize the new Javaclasspath. Thereafter, you won't be bothered by the Javaclasspath any more. 
+Then you restart your Matlab to initialize the new Javaclasspath. Thereafter, you won't be bothered by the Javaclasspath any more. 
 
 ## 3. MatlabR path
 Don’t forget to add your MatlabR folder path before using MatlabR by Matlab Command:
