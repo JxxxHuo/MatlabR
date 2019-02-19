@@ -68,7 +68,7 @@ r.result.asDoubles()
    ```
    r.kill
    clear r
-   
+  ```  
    ## An example of Matrix calculation by R in the command line of Matlab
    
    ```
@@ -94,9 +94,7 @@ z =
 >> r.kill;
 >> clear r
    
-   
-   ```
-   
+    
    ```
 
 ---------------------------------------------------------------------------------------------------------------------------------
