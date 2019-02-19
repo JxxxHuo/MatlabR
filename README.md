@@ -68,6 +68,35 @@ r.result.asDoubles()
    ```
    r.kill
    clear r
+   
+   ## An example of Matrix calculation by R in the command line of Matlab
+   
+   ```
+   >> r=MatR();
+R version 3.5.1 (2018-07-02)
+>> x=[1 2;3 4]
+
+x =
+
+     1     2
+     3     4
+
+>> r.assign('y',x);
+>> r.eval('z=y*2');
+>> z=r.result.asDoubleMatrix();
+>> z
+
+z =
+
+     2     4
+     6     8
+
+>> r.kill;
+>> clear r
+   
+   
+   ```
+   
    ```
 
 ---------------------------------------------------------------------------------------------------------------------------------
